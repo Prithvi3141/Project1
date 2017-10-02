@@ -23,8 +23,7 @@ Project 1 has the following features:
 -> Project 1 aims at developing a rudimentary thermostat making use of Raspberry Pi, DHT22 Temperature/Humidity sensor and QT for gui 
    or interface development.
    
--> As part of the requirements UI allows for request of temperature and humidity values and displays the time of recording of temperature
-   humidity.
+-> As part of the requirements UI allows for request of temperature and humidity values and displays the time of recording of temperature and humidity.
    
 -> The UI handles not receiving data gracefully. UI shows an error stating that data has not been received and it informs the user to make a request again.
 
