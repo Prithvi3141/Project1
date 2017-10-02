@@ -211,21 +211,21 @@ def sensorReadTable(sensor, pin, app):
                 print('humidity: ', humidity)
 
                 if(temperature > 40) and (humidity > 70):
-                        choice = QMessageBox.warning(app, 'High Temperature & Humidity Alert!', 'Temperature is higher than the threshold of 40. \n Humidity is higher than threshold of 70 %', QMessageBox.Ok)
+                        choice = QMessageBox.warning(app, 'High Temperature & Humidity Alert!', 'Temperature is higher than the threshold of 40. \n Humidity is higher than threshold of 70 %', QMessageBox.Close)
                 elif (temperature > 40) and (humidity < 30):
-                        choice = QMessageBox.warning(app, 'High Temperature & Low Humidity Alert!', 'Temperature is higher than the threshold of 40 C. \n Humidity is lower than threshold of 30 %', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'High Temperature & Low Humidity Alert!', 'Temperature is higher than the threshold of 40 C. \n Humidity is lower than threshold of 30 %', QMessageBox.Close)                                              
                 elif temperature > 40:
-                        choice = QMessageBox.warning(app, 'High Temperature Alert!', 'Temperature is higher than the threshold of 40 C.', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'High Temperature Alert!', 'Temperature is higher than the threshold of 40 C.', QMessageBox.Close)                                              
                 elif (temperature < 10) and (humidity > 70):
-                        choice = QMessageBox.warning(app, 'Low Temperature & High Humidity Alert!', 'Temperature is lower than the threshold of 10 C. \n Humidity is higher than threshold of 70 %', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'Low Temperature & High Humidity Alert!', 'Temperature is lower than the threshold of 10 C. \n Humidity is higher than threshold of 70 %', QMessageBox.Close)                                              
                 elif (temperature < 10) and (humidity < 30):
-                        choice = QMessageBox.warning(app, 'Low Temperature & Low Humidity Alert!', 'Temperature is lower than the threshold of 10 C. \n Humidity is lower than threshold of 30 %', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'Low Temperature & Low Humidity Alert!', 'Temperature is lower than the threshold of 10 C. \n Humidity is lower than threshold of 30 %', QMessageBox.Close)                                              
                 elif temperature < 10:
-                        choice = QMessageBox.warning(app, 'Low Temperature Alert!', 'Temperature is lower than the threshold of 10 C.', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'Low Temperature Alert!', 'Temperature is lower than the threshold of 10 C.', QMessageBox.Close)                                              
                 elif humidity < 30:
-                        choice = QMessageBox.warning(app, 'Low Humidity Alert!', 'Humidity is lower than the threshold of 30 %.', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'Low Humidity Alert!', 'Humidity is lower than the threshold of 30 %.', QMessageBox.Close)                                              
                 elif humidity > 70:
-                        choice = QMessageBox.warning(app, 'High Humidity Alert!', 'Humidity is higher than the threshold of 70 %.', QMessageBox.Ok)                                              
+                        choice = QMessageBox.warning(app, 'High Humidity Alert!', 'Humidity is higher than the threshold of 70 %.', QMessageBox.Close)                                              
         
         
 
