@@ -186,12 +186,12 @@ class OuterWidget(QWidget):
 def threadFunction(app):
         
         while 1:
-                sensorReadTable(sensor, pin)
+                sensorReadTable(sensor, pin, app)
                 time.sleep(2)
 
         
 #This function is used to read temperature and  humidity values and store them in a list for future historical display
-def sensorReadTable(sensor, pin):
+def sensorReadTable(sensor, pin, app):
         humidity, temperature = Adafruit_DHT.read_retry(sensor, pin, retries = 2, delay_seconds = 0)
         dateTime = datetime.today()
 
@@ -208,8 +208,9 @@ def sensorReadTable(sensor, pin):
                         listTemperature.insert(i[0], temperature)
                         listHumidity.insert(i[0], humidity)
                         listDateTime.insert(i[0], dateTime)
+                print('humidity: ', humidity)
 
-                if(temperature > 30) and (humidity > 90):
+                if(temperature > 40) and (humidity > 90):
                         choice = QMessageBox.warning(app, 'High Temperature & Humidity Alert!', 'Temperature is higher than the threshold of 40. \n Humidity is higher than threshold of 90 %', QMessageBox.Ok)
                 elif (temperature > 40) and (humidity < 30):
                         choice = QMessageBox.warning(app, 'High Temperature & Low Humidity Alert!', 'Temperature is higher than the threshold of 40 C. \n Humidity is lower than threshold of 30 %', QMessageBox.Ok)                                              
